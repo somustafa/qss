@@ -35,7 +35,7 @@ pattern = rf'\b\w*[{vowels}]\w*\b'
 result = re.findall(pattern, text)
 print(result)
 
-#Which matches a word containing vowels not at the start or end of the word (a,ı,o,u,e,ə,i,ö,ü).
+#2)Which matches a word containing vowels not at the start or end of the word (a,ı,o,u,e,ə,i,ö,ü).
 vowels = "aıoueiəöü"
 text = "Salam qrm nslk bcd qizin adi gdksl Sonadir bbb ekmek uk"
 
@@ -44,7 +44,7 @@ pattern = rf'\b[^{vowels}\W]\w*[{vowels}]\w*[^{vowels}\W]\b'
 matches = re.findall(pattern, text)
 print(matches)
 
-#Checks for a number at the end of a given string
+#3)Checks for a number at the end of a given string
 import re
 
 text1 = "Bu gun ders 2025"
@@ -87,7 +87,7 @@ text = "Hello world! How are you doing today?"
 result = re.findall(r'\b\w{5,}',text)
 print(result)
 
-#Inserts spaces between words starting with capital letters.
+#9.Inserts spaces between words starting with capital letters.
 text = "HelloWorldHowAreYou"
 result = re.sub(r'(?<!^)(?=[A-Z])', ' ', text)
 print(result)
